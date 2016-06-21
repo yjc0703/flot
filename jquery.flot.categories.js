@@ -120,7 +120,8 @@ as "categories" on the axis object, e.g. plot.getAxes().xaxis.categories.
     function setupCategoriesForAxis(series, axis, datapoints) {
         if (series[axis].options.mode != "categories")
             return;
-        
+
+        series[axis].categories = null;
         if (!series[axis].categories) {
             // parse options
             var c = {}, o = series[axis].options.categories || {};
